@@ -1,7 +1,135 @@
+/* Resetting default margin, padding, and font */
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f0f0f0;
+  background-color: rgb(176, 176, 176);
+}
+
+/* Styling links */
+a {
+  color: rgb(103, 126, 255);
+}
+
+/* Styling header */
+header {
+  background-color: rgb(7, 9, 9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  height: 150px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Styling header h1 */
+header h1 {
+  color: white;
+  padding: 1em;
+  margin: 0;
+  font-size: 3em;
+}
+
+/* Styling grid container */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+
+/* Media query for responsive grid layout */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Styling grid items */
+.grid-item {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: #f1f1f1;
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Hover effect on grid items */
+.grid-item:hover {
+  transform: scale(1.03);
+  background-color: #222222;
+  color: white;
+}
+
+/* Instant transition for grid item paragraphs */
+.grid-item p {
+  transition: 0s;
+}
+
+/* Styling grid item images */
+.grid-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+/* Hover effect on links within grid items */
+.grid-item a:hover {
+  color: #ff0101;
+}
+
+/* Animation for grid item fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styling for grid item content */
+.grid-item-content {
+  flex-grow: 1; /* Allow content to expand to fill available space */
+}
+
+/* Styling for project information within grid items */
+.grid-item .project-info {
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Align items evenly */
+  align-items: center; /* Center items vertically */
+  margin-top: 1em;
+}
+
+/* Styling for paragraphs within project information */
+.grid-item .project-info p {
+  margin: 0;
+}
+
+/* Styling footer */
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: #f1f1f1;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Styling footer h1 */
+footer h1 {
+  font-size: larger;
 }
